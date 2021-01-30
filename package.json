@@ -1,0 +1,36 @@
+{
+  "name": "invite-customer-intercom",
+  "version": "1.0.0",
+  "description": "Invite Customer of Intercom base of your clients and minimum distance",
+  "main": "Main.js",
+  "directories": {
+    "src": "src",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node Main.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirlabraga/invite-customer-intercom.git"
+  },
+  "keywords": [
+    "invite",
+    "customer",
+    "intercom",
+    "great",
+    "circle",
+    "distance"
+  ],
+  "author": "Mirla Braga Chucre <mirla.braga@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirlabraga/invite-customer-intercom/issues"
+  },
+  "homepage": "https://github.com/mirlabraga/invite-customer-intercom#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "dependencies": {}
+}
