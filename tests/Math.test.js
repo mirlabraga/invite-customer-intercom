@@ -24,7 +24,7 @@ test('get great circle distance between two equals points', () => {
   expect(getGreatCircleDistance(coordinates)).toBe(0);
 });
 
-test('get great circle distance between two points with distance is 99.988 km, but it is round to 100.', () => {
+test('get great circle distance between two points with distance is 99.988 km. It check with 3 decimal.', () => {
   const coordinates = {
     longitude1: -6.257664,
     latitude1: 53.339428,
@@ -35,7 +35,7 @@ test('get great circle distance between two points with distance is 99.988 km, b
   expect(getGreatCircleDistance(coordinates)).toBe(99.988);
 });
 
-test('get great circle distance between two points with distance is 100.098 km, but it is round to 100.', () => {
+test('get great circle distance between two points with distance is 100.098 km. It check with 3 decimal.', () => {
   const coordinates = {
     longitude1: -6.257664,
     latitude1: 53.339428,

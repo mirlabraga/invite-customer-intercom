@@ -1,12 +1,11 @@
-const { getCustomers } = require("./CustomerModel");
 const { getGreatCircleDistance } = require("./Math");
 
 const POINT_OF_INTEREST = process.env.POINT_OF_INTEREST || { latitude: 53.339428, longitude: -6.257664 };
+const DISTANCE_FOR_INVITE = process.env.DISTANCE_FOR_INVITE || 100;
 
-async function execute(reporter) {
+async function execute(reporter, customers) {
 
   try {
-    const customers = await getCustomers();
     customers.forEach(async customer => {
 
       const coordinates = {
@@ -16,13 +15,13 @@ async function execute(reporter) {
         latitude2: POINT_OF_INTEREST.latitude
       };
 
-      if (getGreatCircleDistance(coordinates) >= 100) {
+      if (getGreatCircleDistance(coordinates) <= DISTANCE_FOR_INVITE) {
         const result = await reporter.write({name: customer.name, user_id: customer.user_id});
-        console.log(`[INFO] ${result}`);
+        console.info(`[INFO] ${result}`);
       }
     })
   } catch (error) {
-    throw new Error("an error happened when process the customers data.", error);
+    throw new Error("an error happened when process the customers invitation.", error);
   }
 
 }
