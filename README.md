@@ -1,10 +1,9 @@
 # invite-customer-intercom
 
-The invite customer intercom is responsible for invite the any customer
-within 100km of our Intercom Dublin office.
+The challange is: it is creating a implementation that invite customer intercom is responsible for invite the any customer within 100km of the Intercom Dublin office from
+customers.txt and acccording the [Great circle distance](https://en.wikipedia.org/wiki/Great-circle_distance).
 
-The solution used the approximated Radius of the Earth according to
-//https://en.wikipedia.org/wiki/Earth_radius
+The solution  I used the approximated Radius of the Earth according to  [Earth Radius](//https://en.wikipedia.org/wiki/Earth_radius) (R = 6371).
 
 ## Development Requirements
 
@@ -17,7 +16,7 @@ The solution used the approximated Radius of the Earth according to
 Use the package manager [npm](https://www.npmjs.com/) to install invite-customer-intercom.
 
 ```bash
-$ unzip invite-customer-intercom.zip
+$ git clone git@github.com:mirlabraga/invite-customer-intercom.git
 $ cd invite-customer-intercom
 $ npm install
 ```
@@ -27,29 +26,28 @@ $ npm install
 To run the process, unzip the project and install the dependencies and following
 
 ```bash
-$ unzip invite-customer-intercom.zip
 $ cd invite-customer-intercom
 $ npm install
 $ npm start
 ```
 
+You also can use *node Main.js* to run the application.
+
 ## Response
 
-
+Output file with name `output.txt` with `name` and `user_id` properties will be
+create inside the directory *invite-customer-intercom*
 
 ## Tests
 
-  To run the test suite, first, install the dependencies, then run `npm run test`:
+To run the test suite, after install the all dependencies, so run `npm run test`:
+The test run in default value properties.
 
 ```bash
 $ npm install
 $ npm run test
 ```
-
-## Contributing
-The contribuinte are welcome. Feel free to open pull requests.
-
-Please make certain to update the tests as necessary.
+You also can use *npm test* to run all tests in the application.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
