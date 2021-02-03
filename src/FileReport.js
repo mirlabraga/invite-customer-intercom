@@ -29,7 +29,7 @@ class FileReport {
   write(data) {
     return new Promise((resolve, reject) => {
       fs.appendFile(this.fileName, JSON.stringify(data) + "\r\n", (err, fd) => {
-        if (err) return reject(err);
+        if (err) return reject("a error occurred while was writing in the output file.");
         return resolve(`${this.messageOutput} ${data.name}`)
       });
     })
